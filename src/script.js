@@ -78,3 +78,4 @@ search_btn.addEventListener('click', () => {
 setInterval(() => {
     getWeather()
 }, 3000000);
+
