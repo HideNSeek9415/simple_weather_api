@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="seach-form">
+        <button id="search"><i class="mdi mdi-magnify"></i></button>
+        <input type="text" id="search-text" placeholder="Search city...">
+      </div>
+      <div class="unit-select">
+        <button id="fahrenheit">&#176F</button>
+        <button id="celsius">&#176C</button>
+      </div>
+    </div>
+    <div id="weather-icon" class="weather-icon center-div">
+    </div>
+    <div class="center-div">
+      <div id="weather-state" class="state"></div>
+    </div>
+    <div id="weather-location" class="city center-div"></div>
+    <div id="weather-temperature" class="temperature center-div"></div>
+    <div class="min-max-temp center-div">
+      <p>Min: <span id="weather-min-temp"></span></p>
+      <p>Max: <span id="weather-max-temp"></span></p>
+    </div>
+    <div class="info">
+      <div class="card">
+        <i class="mdi mdi-water card-ico"></i>
+        <p>Humidity: <span id="weather-humidity"></span></p>
+      </div>
+      <div class="card">
+        <i class="mdi mdi-thermometer card-ico"></i>
+        <p>Feel like: <span id="weather-feel-like"></span></p>
+      </div>
+      <div class="card">
+        <i class="mdi mdi-weather-windy card-ico"></i>
+        <p>Wind speed: <span id="weather-wind"></span></p>
+      </div>
+      <div class="card">
+        <i class="mdi mdi-compass card-ico"></i>
+        <p>Pressure: <span id="weather-pressure"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
