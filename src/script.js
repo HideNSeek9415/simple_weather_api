@@ -33,6 +33,7 @@ const getWeather = () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${unit}`)
         .then(res => res.json())
         .then(data => {
+            console.log(city)
             weather_icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png"/>`
             weather_state.innerHTML = `${capitalizeFirstLetter(data.weather[0].description)}`
             weather_location.innerHTML = `${data.name}, ${convertCountryCode(data.sys.country)}`
@@ -73,3 +74,7 @@ search_btn.addEventListener('click', () => {
     search_text.value = ''
     getWeather()
 })
+
+setInterval(() => {
+    getWeather()
+}, 3000000);
