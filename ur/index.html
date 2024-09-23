@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle Solver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>WORDLE SOLVER</h2>
+    <button id="restart">Restart</button>
+    <h4>Correct letter</h4>
+    <div class="input-zone">
+      <div class="rows">
+        <div class="word" id="correct-zone">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+        </div>
+      </div>
+    </div>
+    <h4>Wrong spot letter</h4>
+    <div class="input-zone" id="wrong-spot-zone">
+      <div class="rows" id="wrong-spot-rows">
+        <div class="word">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+          <input type="text" class="letter" maxlength="1">
+        </div>
+      </div>
+      <button id="add-row">Add row</button>
+    </div>
+    <h4>Invalid letter</h4>
+    <div class="input-zone">
+      <input type="text" class="invalid-letters" id="invalid-letters">
+    </div>
+    <button id="guess">GUESS</button>
+    <h4>Possible words</h4>
+    <div class="possible-zone" id="possible-zone">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
