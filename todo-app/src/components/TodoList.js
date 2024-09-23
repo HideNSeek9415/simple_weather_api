@@ -1,7 +1,7 @@
 // src/components/TodoList.js
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleTodo, removeTodo } from '../redux/TodoSlice';
+import { toggleTodo, removeTodo } from '@/redux/TodoSlice';
 
 const TodoList = () => {
   const todos = useSelector(state => state.todos.list);  // Lấy danh sách todos từ Redux state

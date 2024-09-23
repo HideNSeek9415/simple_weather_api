@@ -1,7 +1,7 @@
   // src/components/TodoForm.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../redux/TodoSlice';
+import { addTodo } from '@/redux/TodoSlice';
 
 const TodoForm = () => {
   const [text, setText] = useState('');
