@@ -1,5 +1,12 @@
-* {
+@font-face {
   font-family: 'Sono';
+  src: url('./fonts/Sono.ttf') format('truetype'); /* Sử dụng 'truetype' cho định dạng .ttf */
+  font-weight: normal;  
+  font-style: normal;   
+}
+
+* {
+  font-family: 'Sono', 'Roboto', sans-serif; /* Sử dụng font chữ Sono làm font chính */
 }
 
 .app {
@@ -13,5 +20,5 @@
 
 h1 {
   padding-top: 10px;
-  color: #007bff;
+  color: #007bff; /* Màu chữ cho tiêu đề */
 }
