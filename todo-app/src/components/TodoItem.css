@@ -7,9 +7,10 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  user-select: none;
 }
 
-.todo-item.completed {
+.todo-item.completed div {
   text-decoration: line-through;
   color: #999;
 }
@@ -25,4 +26,15 @@
 
 .delete-btn:hover {
   background-color: #a72c28;
+}
+
+.edit-btn {
+  background: rgb(218, 171, 115);
+  border: 1px solid white;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: .5rem;
+  border-radius: 4px;
+  cursor: pointer;
 }

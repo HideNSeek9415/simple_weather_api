@@ -1,11 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter, Filters } from '../redux/actions';
+// import { setFilter } from '../redux/actions';
+import { setFilter } from '../redux/slice';
+import Filters from '../redux/filterType';
 import './TodoFilter.css';
 
 const TodoFilter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filter);
+  // @ts-ignore
+  const filter = useSelector((state) => state.filter.filter);  // Lấy filter từ state
 
   return (
     <div className="todo-filter">

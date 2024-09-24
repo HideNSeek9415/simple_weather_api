@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../redux/actions';
+// import { addTodo } from '../redux/actions';
+import { addTodo } from '../redux/slice'
 import './AddTodo.css';
 
 const AddTodo = () => {
@@ -10,22 +11,29 @@ const AddTodo = () => {
 
   const handleAddTodo = () => {
     if (input.trim()) {
-      dispatch(addTodo(input));
+      dispatch(addTodo({
+        content: input
+      }));
       setInput('');
-      inputElement.current.focus()
-    }
+    if (inputElement.current) {
+      // @ts-ignore
+      inputElement.current?.focus();
+    }    }
   };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleAddTodo();
-      inputElement.current.focus()
-    }
+      if (inputElement.current) {
+        // @ts-ignore
+        inputElement.current?.focus();
+      }    }
   }
 
   useEffect(() => {
     if (inputElement.current) {
-      inputElement.current.focus();
+      // @ts-ignore
+      inputElement.current?.focus();
     }
   }, []);
 

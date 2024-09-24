@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeTodo, toggleTodo } from '../redux/actions';
+// import { removeTodo, toggleTodo } from '../redux/actions';
+import { removeTodo, toggleTodo } from '../redux/slice';
 import './TodoItem.css';
 
 const TodoItem = ({ todo }) => {
@@ -19,7 +20,9 @@ const TodoItem = ({ todo }) => {
       className={`todo-item ${todo.completed ? 'completed' : ''}`}
       onClick={handleToggle}
     >
-      {todo.content}
+      <div>
+        {todo.content}
+      </div>
       <button className="delete-btn" onClick={handleDelete}>Xóa</button>
     </li>
   );
