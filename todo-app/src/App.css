@@ -1,0 +1,17 @@
+* {
+  font-family: 'Sono';
+}
+
+.app {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center; 
+  background-color: rgb(225, 225, 225);
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgb(153, 153, 153);
+}
+
+h1 {
+  padding-top: 10px;
+  color: #007bff;
+}

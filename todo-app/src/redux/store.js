@@ -1,11 +1,6 @@
-// src/redux/store.js
-import { configureStore } from '@reduxjs/toolkit';
-import todoReducer from '@/redux/TodoSlice';
+import { createStore } from 'redux';
+import todoReducer from './reducer';
 
-const store = configureStore({
-  reducer: {
-    todos: todoReducer,  // Kết hợp slice todos vào store
-  },
-});
+const store = createStore(todoReducer);
 
 export default store;
